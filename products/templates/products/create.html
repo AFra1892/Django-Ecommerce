@@ -1,0 +1,13 @@
+{% extends "products/base.html" %}
+
+{% block content %}
+<h1 style="text-align:center;">All Produts</h1>
+<form action="." method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Save</button>
+</form>
+{% if message %}
+    <p>{{message}}</p>
+{% endif %}
+{% endblock content %}
